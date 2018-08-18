@@ -1,6 +1,6 @@
 # Behave Testing Automation Framework for Python
 
-This repo demonstrate BDD in python using the Behave module.
+This repo demonstrates BDD in python using the Behave module.
 It include examples to:
 
 - Defining steps - with Gherkin's GWT (Given Then When)
