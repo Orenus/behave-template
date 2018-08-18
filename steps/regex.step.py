@@ -1,7 +1,8 @@
 from behave import *
-from module_a import calc_image, start_app, test_port
+from tested_module import calc_image, start_app, test_port
 
-
+# this should be defined before any block containing step impl using regex
+# to set the parser mode back use: user_step_matcher("parser")
 use_step_matcher("re")
 
 # The following step expression demonstrate a set of expected optional values. (application region)

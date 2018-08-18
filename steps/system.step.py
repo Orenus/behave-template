@@ -1,6 +1,5 @@
 from behave import *
-from module_a import calc_image
-from module_a import get_image_price
+from tested_module import calc_image, get_image_price
 
 
 @given('number of CPUs is {cpu}')
