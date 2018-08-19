@@ -26,8 +26,8 @@ def step_impl(context, region):
 # It will implement a step statement like:
 #   When I start 2 xlarge instances with "my-application-image" in the "ap-northeast" region
 # 1st quantity matcher for "a" or "an" or number
-# 2nd size matcher - any word. preferably should be optional list like reqion
-# non catching but matching plurar s in instance(s)
+# 2nd size matcher - any word. preferably should be optional list like region
+# non catching but matching plural s in instance(s)
 # 3rd app image - expecting to match a word with -
 # 4th region as in prev step implementation
 
@@ -47,8 +47,8 @@ def step_impl(context, quantity, size, app_image, region):
 
 @then('I should be able to access (?:them|it) on port (?P<port>\d+)')
 def step_impl(context, port):
-    print ("port %s" % (port))
+    print "port %s" % (port)
     for instance in context.tested_instances:
         result = test_port(instance["fqdn"], int(port))
-        assert (result), "expected port %s on %s to be accessible but it isnt" % (
-            port, instance['fqdn'])
+        assert (result), "expected port %s on %s to be accessible but it isn't" % (
+            port, instance["fqdn"])

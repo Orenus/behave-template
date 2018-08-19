@@ -1,9 +1,12 @@
+""" EC2 mock operations functions """
 import random
-
-# returns a fake instance with randomized fqdn
 
 
 def start_app(size, region, image):
+    """
+        This function supposedly starts an EC2 instance provided deployment size, deployment region,
+        and image. It returns an instance object with a randomly generated fqdn and status
+     """
     return {
         "size": size,
         "region": region,
@@ -16,4 +19,8 @@ def start_app(size, region, image):
 
 
 def test_port(fqdn, port):
-    return (random.randint(0, 5) == 1)
+    """
+        This function supposedly checks accessibility of instance provided its fqdn and the
+        port. It returns a random True / False (just to simulate success failure)
+    """
+    return random.randint(0, 5) == 1
