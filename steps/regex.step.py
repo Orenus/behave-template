@@ -26,7 +26,8 @@ def step_impl(context, region):
 # It will implement a step statement like:
 #   When I start 2 xlarge instances with "my-application-image" in the "ap-northeast" region
 # 1st quantity matcher for "a" or "an" or number
-# 2nd size matcher - any word. preferably should be optional list like region
+# 2nd size matcher - any word. preferably should be optional list like region.
+# *** in order to learn the proper way of defining options/choices please visit: https://jenisys.github.io/behave.example/datatype/choice.html
 # non catching but matching plural s in instance(s)
 # 3rd app image - expecting to match a word with -
 # 4th region as in prev step implementation
