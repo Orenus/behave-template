@@ -1,4 +1,3 @@
-# -- FILE: features/steps/example_steps.py
 from behave import given, when, then, step
 from environs import Env
 from selenium import webdriver
@@ -9,11 +8,11 @@ chromeOptions = Options()
 chromeOptions.headless = True
 
 
-env = Env()
-env.read_env()
+# env = Env()
+# env.read_env()
 
-env.str("SECRET_USER")
-env.str("SECRET_PWD")
+# env.str("SECRET_USER")
+# env.str("SECRET_PWD")
 
 
 @given('se navega a "{page}"')
