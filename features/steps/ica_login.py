@@ -1,30 +1,18 @@
-from behave import given, when, then, step
-from environs import Env
-from selenium import webdriver
-from selenium.webdriver.support.select import Select
-from selenium.webdriver.chrome.options import Options
-
-chromeOptions = Options()
-chromeOptions.headless = True
+from behave import given, when, then
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 
-# env = Env()
-# env.read_env()
-
-# env.str("SECRET_USER")
-# env.str("SECRET_PWD")
-
-
-@given('se navega a "{page}"')
-def step_impl(context, page):
-    driver = webdriver.Chrome(
-        executable_path="./drivers/armhf/chromedriver", options=chromeOptions)
-    # driver.maximize_window()
-    driver.get(page)
-    driver.quit()
+@given('se navega a "{site}"')
+def step(context,site):
+    context.browser.visit(site)
     pass
 
 
 @when('se accede a la pagina principal')
-def step_impl(context):
+def step(context):
+    # search_field = context.find_element(By.XPATH, 'id("twotabsearchtextbox")')
+    # search_field.send_keys(product)
     pass
