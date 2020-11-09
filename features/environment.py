@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
@@ -10,7 +9,7 @@ def before_all(context):
     #chromeOptions.headless = True
 
     context.driver = webdriver.Chrome(
-        executable_path='chromedriver',
+        #executable_path='chromedriver',
         chrome_options=chromeOptions)
     context.driver.implicitly_wait(10)
 
