@@ -1,4 +1,3 @@
-#from browser import Browser
 from selenium import webdriver
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
