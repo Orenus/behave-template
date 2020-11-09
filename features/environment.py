@@ -5,8 +5,8 @@ from selenium.webdriver.chrome.options import Options
 def before_all(context):
     chromeOptions = Options()
 
-    chromeOptions.headless = False
-    #chromeOptions.headless = True
+    #chromeOptions.headless = False
+    chromeOptions.headless = True
 
     context.driver = webdriver.Chrome(
         #executable_path='chromedriver',
