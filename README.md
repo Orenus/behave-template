@@ -9,15 +9,7 @@ Este repositorio desarrolla pruebas automatizadas mediante el uso del lenguaje `
 
 Crea un archivo .env basado en el archivo de referencia dentro del repositorio llamado .env.example. Luego de esto, para construir el contenedor ejecuta los siguientes pasos:
 
-### Build
-```
-./scripts/docker_build.sh
-```
-
 ### Run
 ```
-./scripts/docker_run.sh
+bash entrypoint.sh
 ```
-
-## Referencias
-https://www.techbeamers.com/navigation/
